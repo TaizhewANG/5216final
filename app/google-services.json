@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "710573678120",
+    "firebase_url": "https://natural-ether-277713.firebaseio.com",
+    "project_id": "natural-ether-277713",
+    "storage_bucket": "natural-ether-277713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710573678120:android:bf55898c58dfdb8035df1d",
+        "android_client_info": {
+          "package_name": "au.edu.canberra.mtfinalassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710573678120-78m9vg56geugveq008kefl4igqhdv06j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-7CMBMiZXN01xCo4dR-oHAh9OYWvYAFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710573678120-78m9vg56geugveq008kefl4igqhdv06j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

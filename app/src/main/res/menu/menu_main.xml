@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context="com.cc.mymapstreetviewapp.MapsActvity">
+<item
+    android:id="@+id/map_normal"
+    android:orderInCategory="100"
+    android:title="Normal"
+    app:showAsAction="never" />
+<item
+    android:id="@+id/map_satellite"
+    android:orderInCategory="100"
+    android:title="Satellite"
+    app:showAsAction="never" />
+<item android:id="@+id/ActivityEight" android:title="ListViewActivity"/>
+</menu>
