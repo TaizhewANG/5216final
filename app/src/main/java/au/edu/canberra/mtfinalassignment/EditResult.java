@@ -201,8 +201,7 @@ public class EditResult extends AppCompatActivity {
     }
 
     public void cancel(View v) {
-        Intent intent = new Intent(getApplicationContext(), HistoryImg.class);
-        startActivity(intent);
+        finish();
     }
 
     public void updateDetectedResultToFirebaseDatabase(ClassifiedItem item,String key){

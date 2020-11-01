@@ -259,7 +259,7 @@ public class IBMMain extends AppCompatActivity {
 
                 final String item = name;
 
-                final  String data2 = "IBM Watson: Detected Item: " + item + ". Detected Score: " + String.valueOf(score);
+                final  String data2 = "The item is: " + item + ".\nWith: " + String.valueOf(score*100) + "% likelihood!";
                 imageFileName = (item + String.valueOf(new Date().getTime()))
                         .toLowerCase()
                         .replace(' ', '_') + ".jpg";

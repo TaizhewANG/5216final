@@ -96,4 +96,8 @@ public class ImgResult extends AppCompatActivity {
         intent.putExtra("imageFileName",imageFileName);
         startActivity(intent);
     }
+
+    public void finish(View view) {
+        finish();
+    }
 }

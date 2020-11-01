@@ -98,4 +98,5 @@ public class HistoryImg extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), IBMMain.class);
         startActivity(intent);
     }
+
 }

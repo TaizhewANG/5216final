@@ -21,23 +21,27 @@
 
     <Button
         android:id="@+id/AddImage"
+        android:drawableTop="@android:drawable/ic_menu_myplaces"
+        android:drawablePadding="1dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="76dp"
         android:onClick="AddImage"
-        android:text="Add"
+        android:text="Done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/Listview"
         android:layout_width="345dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="21dp"
         android:layout_marginBottom="167dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Scenery_result_txt" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

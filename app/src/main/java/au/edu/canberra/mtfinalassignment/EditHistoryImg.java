@@ -64,7 +64,7 @@ public class EditHistoryImg extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_history_img);
-        setTitle("IBM and Google Image Classification");
+        setTitle("IBM Image Classification");
         Intent intent = getIntent();
         mian_name = findViewById(R.id.textViewLarge);
         sub_name = findViewById(R.id.textView3);
