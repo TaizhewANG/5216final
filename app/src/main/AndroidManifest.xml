@@ -21,12 +21,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityNine" />
-        <activity android:name=".ActivityEight" />
-        <activity android:name=".ActivitySeven" />
-        <activity android:name=".ActivitySix" />
-        <activity android:name=".ActivityThree" />
-        <activity android:name=".ActivityTwo" />
+        <activity android:name=".HistoryImg" />
+        <activity android:name=".EditResult" />
+        <activity android:name=".ImgResult" />
+        <activity android:name=".IBMMain" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -40,7 +38,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ActivityOne"
+            android:name=".Main"
             android:label="Activity 1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
