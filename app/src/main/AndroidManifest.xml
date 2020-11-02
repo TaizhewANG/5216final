@@ -23,6 +23,8 @@
         <activity android:name=".ImgResult" />
         <activity android:name=".IBMMain" />
         <activity android:name=".EditHistoryImg" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".RegisterActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

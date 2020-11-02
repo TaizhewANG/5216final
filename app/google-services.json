@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "710573678120",
-    "firebase_url": "https://natural-ether-277713.firebaseio.com",
-    "project_id": "natural-ether-277713",
-    "storage_bucket": "natural-ether-277713.appspot.com"
+    "project_number": "75444669392",
+    "firebase_url": "https://final-2fb92.firebaseio.com",
+    "project_id": "final-2fb92",
+    "storage_bucket": "final-2fb92.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:710573678120:android:bf55898c58dfdb8035df1d",
+        "mobilesdk_app_id": "1:75444669392:android:912bc79a702fdf5e5e07d5",
         "android_client_info": {
           "package_name": "au.edu.canberra.mtfinalassignment"
         }
       },
       "oauth_client": [
         {
-          "client_id": "710573678120-78m9vg56geugveq008kefl4igqhdv06j.apps.googleusercontent.com",
+          "client_id": "75444669392-5umgq77ddrasa6jdcampp5p79uah9tfk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-7CMBMiZXN01xCo4dR-oHAh9OYWvYAFU"
+          "current_key": "AIzaSyBi-ReiWHR-1qT3TFd9A_t1bs3vIZhL4Bw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "710573678120-78m9vg56geugveq008kefl4igqhdv06j.apps.googleusercontent.com",
+              "client_id": "75444669392-5umgq77ddrasa6jdcampp5p79uah9tfk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

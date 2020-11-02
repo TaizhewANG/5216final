@@ -19,7 +19,7 @@ public class Main extends AppCompatActivity {
     }
 
     public void openView(View v) {
-        Intent intent = new Intent(getApplicationContext() , IBMMain.class);
+        Intent intent = new Intent(getApplicationContext() , SignIn.class);
         startActivity(intent);
     }
 
