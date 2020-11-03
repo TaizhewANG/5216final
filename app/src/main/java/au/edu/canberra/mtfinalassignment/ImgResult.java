@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 
 import java.io.IOException;
@@ -51,7 +54,7 @@ public class ImgResult extends AppCompatActivity {
     String a;
     String b;
     String c;
-
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +76,31 @@ public class ImgResult extends AppCompatActivity {
         b = intent.getStringExtra("classifiedResult");
         c = intent.getStringExtra("detectedScore");
         imageFileName = intent.getStringExtra("imageFileName");
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.bn_dashboard:
+                        startActivity(new Intent(getApplicationContext(),
+                                SignIn.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.bn_account:
+                        startActivity(new Intent(getApplicationContext(),
+                                IBMMain.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.bn_home:
+                        startActivity(new Intent(getApplicationContext(),
+                                IBMMain.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     private Bitmap getCapturedImage() {

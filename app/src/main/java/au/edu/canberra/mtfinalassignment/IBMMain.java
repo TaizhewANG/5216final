@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,9 +20,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
@@ -44,8 +47,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Deque;
 
 
 public class IBMMain extends AppCompatActivity {
@@ -67,6 +72,9 @@ public class IBMMain extends AppCompatActivity {
     private CameraHelper cameraHelper;
     private GalleryHelper galleryHelper;
 
+    BottomNavigationView bottomNavigationView;
+    Deque<Integer> integerDeque = new ArrayDeque<>(3);
+
     private final String api_key = "E_OniHRo8v93K9svjW1Eznx5-LS2RihdGiUUJAlExkH6";
 
     @Override
@@ -87,6 +95,31 @@ public class IBMMain extends AppCompatActivity {
                 .apiKey(api_key)
                 .build();
         visualRecognition = new VisualRecognition("2020-01-30", options);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.bn_dashboard:
+                        startActivity(new Intent(getApplicationContext(),
+                                SignIn.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.bn_account:
+                        startActivity(new Intent(getApplicationContext(),
+                                IBMMain.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.bn_home:
+                        startActivity(new Intent(getApplicationContext(),
+                                IBMMain.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     public void captureImage(View view){
