@@ -27,7 +27,7 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     private void init() {
-
+        setTitle("IBM Watson ML Cloud Service");
         SharedPreferences sp=getSharedPreferences("gender", MODE_PRIVATE);
         gender=sp.getString(userName, "");
 

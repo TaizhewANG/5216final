@@ -23,7 +23,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
         Intent intent = getIntent();
-
+        setTitle("IBM Watson ML Cloud Service");
         init();
     }
 

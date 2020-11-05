@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void init() {
-
+        setTitle("IBM Watson ML Cloud Service");
         //activity_register.xml
         Button btn_register = (Button) findViewById(R.id.btn_register);
         et_user_name= (EditText) findViewById(R.id.et_user_name);

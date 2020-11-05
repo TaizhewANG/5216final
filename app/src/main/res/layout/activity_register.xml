@@ -143,7 +143,7 @@
                 android:paddingLeft="6dp"
                 android:hint="E-mail"
                 android:singleLine="true"
-                android:maxLength="15"
+                android:maxLength="30"
                 android:background="#ffffff"
                 android:textSize="18sp" />
         </LinearLayout>
