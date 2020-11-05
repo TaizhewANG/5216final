@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if(sex==0){
                         saveGender(userName, "Female");
                     }
-                    else if(sex==-1){
+                    else if(sex==1){
                         saveGender(userName, "Male");
                     }
                     saveEmail(userName, email);
