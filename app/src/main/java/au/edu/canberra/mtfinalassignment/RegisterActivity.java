@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText et_user_name,et_psw,et_psw_again;
-    private String userName,psw,pswAgain;
+    private EditText et_user_name,et_psw,et_psw_again,et_email;
+    private String userName,psw,pswAgain,email;
     private RadioGroup Sex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         et_psw= (EditText) findViewById(R.id.et_psw);
         et_psw_again= (EditText) findViewById(R.id.et_psw_again);
         Sex= (RadioGroup) findViewById(R.id.SexRadio);
+        et_email= (EditText) findViewById(R.id.et_email);
         //register
         btn_register.setOnClickListener(new View.OnClickListener() {
 
@@ -75,7 +76,13 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Register successfully", Toast.LENGTH_SHORT).show();
 
                     saveRegisterInfo(userName, psw);
-
+                    if(sex==0){
+                        saveGender(userName, "Female");
+                    }
+                    else if(sex==-1){
+                        saveGender(userName, "Male");
+                    }
+                    saveEmail(userName, email);
                     Intent data = new Intent();
                     data.putExtra("userName", userName);
                     setResult(RESULT_OK, data);
@@ -90,6 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
         userName=et_user_name.getText().toString().trim();
         psw=et_psw.getText().toString().trim();
         pswAgain=et_psw_again.getText().toString().trim();
+        email=et_email.getText().toString().trim();
     }
     /**
      * Read form SharedPreferences
@@ -120,4 +128,19 @@ public class RegisterActivity extends AppCompatActivity {
         //editor.commit();
         editor.apply();
     }
+
+    private void saveGender(String userName, String gender){
+        SharedPreferences sp=getSharedPreferences("gender", MODE_PRIVATE);
+        SharedPreferences.Editor editor=sp.edit();
+        editor.putString(userName, gender);
+        editor.apply();
+    }
+
+    private void saveEmail(String userName, String email){
+        SharedPreferences sp=getSharedPreferences("email", MODE_PRIVATE);
+        SharedPreferences.Editor editor=sp.edit();
+        editor.putString(userName, email);
+        editor.apply();
+    }
+
 }

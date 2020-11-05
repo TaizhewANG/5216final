@@ -63,13 +63,14 @@ public class SignIn extends AppCompatActivity {
                     //success
                     Toast.makeText(SignIn.this, "Success", Toast.LENGTH_SHORT).show();
                     saveLoginStatus(true, userName);
-                    Intent data = new Intent();
+                    Intent intent = new Intent(SignIn.this, IBMMain.class);
                     //datad.putExtra( ); name , value ;
-                    data.putExtra("isLogin", true);
+                    intent.putExtra("isLogin", true);
+                    intent.putExtra("userName", userName);
                     //RESULT_OK=-1
-                    setResult(RESULT_OK, data);
+                    setResult(RESULT_OK, intent);
                     SignIn.this.finish();
-                    startActivity(new Intent(SignIn.this, IBMMain.class));
+                    startActivity(intent);
                 } else if ((spPsw != null && !TextUtils.isEmpty(spPsw) && !md5Psw.equals(spPsw))) {
                     Toast.makeText(SignIn.this, "Wrong account or password", Toast.LENGTH_SHORT).show();
                 } else {

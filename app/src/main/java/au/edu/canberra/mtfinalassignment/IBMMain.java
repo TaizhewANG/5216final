@@ -67,7 +67,7 @@ public class IBMMain extends AppCompatActivity {
     private String temp;
     private String item;
     private String all;
-
+    private String userName;
     private VisualRecognition visualRecognition;
     private CameraHelper cameraHelper;
     private GalleryHelper galleryHelper;
@@ -82,10 +82,12 @@ public class IBMMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ibm_main);
         Intent intent = getIntent();
+
+        userName = intent.getStringExtra("userName");
+
         setTitle("IBM Watson ML Cloud Service");
         imageView = findViewById(R.id.imageView2);
         textView = (TextView) findViewById(R.id.textView4);
-
         activity = this;
 
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.ibm));
@@ -107,8 +109,9 @@ public class IBMMain extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.bn_account:
-                        startActivity(new Intent(getApplicationContext(),
-                                IBMMain.class));
+                        Intent intent = new Intent(IBMMain.this, AccountActivity.class);
+                        intent.putExtra("userName", userName);
+                        startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.bn_home:
